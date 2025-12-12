@@ -41,7 +41,7 @@ const Projects = () => {
             </div>
 
             <a
-              href="https://github.com/your-username/portfolio-site"
+              href="https://github.com/aryankakk/personal-portfolio"
               className="projectCard__link"
               target="_blank"
               rel="noreferrer"

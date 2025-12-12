@@ -1,0 +1,251 @@
+/* =========================
+   About / Skills Section
+   ========================= */
+
+   .skills {
+    padding: 6rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Section heading */
+  .skills__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    text-align: center;
+  }
+  
+  /* Intro paragraph under heading */
+  .skills__subtitle {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.7;
+    font-size: 1rem;
+    color: #c9c9c9;
+    text-align: center;
+  }
+  
+  /* =========================
+     Technical slider
+     ========================= */
+  
+  .aboutSlider {
+    background: #181818;
+    border-radius: 1.5rem;
+    padding: 2.2rem 2.4rem 1.8rem;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+    margin-bottom: 3rem;
+  }
+  
+  .aboutSlider__card {
+    text-align: left;
+  }
+  
+  /* NEW: row that holds emoji + title on the same line */
+  .aboutSlider__headerRow {
+    display: flex;
+    align-items: center;       /* vertically align emoji + text */
+    justify-content: center;   /* center the whole row in the card */
+    gap: 0.75rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* emoji */
+  .aboutSlider__icon {
+    font-size: 2.2rem;
+    margin: 0;                 /* no bottom margin so it stays in-line */
+  }
+  
+  /* title, now aligned with the emoji */
+  .aboutSlider__title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;          /* left-align within the row */
+  }
+  
+  
+  .aboutSlider__text {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: #d0d0d0;
+  }
+  
+  /* slider tabs */
+  .aboutSlider__dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .aboutSlider__dot {
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid #374151;
+    background: #111827;
+    color: #e5e7eb;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition:
+      background 0.15s ease-out,
+      border-color 0.15s ease-out,
+      color 0.15s ease-out,
+      transform 0.15s ease-out;
+  }
+  
+  .aboutSlider__dot--active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+  
+  .aboutSlider__dot:hover {
+    border-color: #4b5563;
+  }
+  
+  /* =========================
+     Beyond the code (text only)
+     ========================= */
+  
+  .aboutBio {
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  .aboutBio__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .aboutBio__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #c9c9c9;
+    margin: 0 auto;
+    max-width: 750px;
+  }
+  
+ /* ===== Life / family photo slider ===== */
+
+.lifeSlider {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.lifeSlider__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* outer flex container for arrows + viewport */
+.lifeSlider__carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* viewport that hides overflow */
+.lifeSlider__viewport {
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+/* sliding track with all images */
+.lifeSlider__track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s ease-in-out; /* SLIDE animation */
+}
+
+/* each slide takes full viewport width */
+.lifeSlider__slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* image – show full photo, no cropping */
+.lifeSlider__img {
+  max-width: 100%;
+  max-height: 650px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* caption below */
+.lifeSlider__caption {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: #d0d0d0;
+}
+
+/* arrows */
+
+.lifeSlider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #111827;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lifeSlider__arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
+}
+
+.lifeSlider__arrow--left {
+  left: -70px;
+}
+
+.lifeSlider__arrow--right {
+  right: -70px;
+}
+
+/* mobile tweaks */
+@media (max-width: 800px) {
+  .lifeSlider__viewport {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .lifeSlider__arrow--left { left: -35px; }
+  .lifeSlider__arrow--right { right: -35px; }
+
+  .lifeSlider__img {
+    max-height: 340px;
+  }
+}

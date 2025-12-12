@@ -1,0 +1,10 @@
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    color: #9ca3af;        /* subtle gray */
+    background: #111;      /* dark background; adjust to match your sections */
+    margin-top: 4rem;
+    border-top: 1px solid #1f2937; /* thin top border */
+  }

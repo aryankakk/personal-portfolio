@@ -1,0 +1,162 @@
+.certifications-section {
+    padding: 6rem 1.5rem;      /* same as .exp */
+    max-width: 1100px;         /* same as .exp */
+    margin: 0 auto;            /* center in the page */
+    background: transparent;   /* <-- no separate band */
+  }
+  
+  .certifications-inner {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Heading */
+  
+  .certifications-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 3rem 0;
+    text-align: center;
+  }
+  
+  /* Slider layout */
+  
+  .cert-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  /* Arrow buttons – match your dark cards */
+  
+  .cert-arrow-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid #2563eb;
+    background: #181818;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s ease-out, transform 0.15s ease-out,
+      box-shadow 0.15s ease-out;
+    color: #e5e7eb;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .cert-arrow-btn:hover {
+    background: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+  }
+  
+  .cert-arrow-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Card – match expDetailCard / active sidebar */
+  
+  .cert-card-wrapper {
+    max-width: 520px;
+    width: 100%;
+  }
+  
+  .cert-card {
+    background: #181818;
+    border-radius: 1.5rem;
+    padding: 1.9rem 2.1rem;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+    border: none;
+    text-align: left;
+  }
+  
+  /* Text inside card */
+  
+  .cert-title {
+    font-size: 1.75rem;        
+    font-weight: 600;         
+    color: #ffffff;           /* pure white like Work Experience titles */
+    margin: 0 0 0.6rem 0;
+  }
+  
+  .cert-provider {
+    font-size: 1rem;
+    color: #d0d0d0;
+  }
+  
+  .cert-date {
+    font-size: 0.95rem;
+    color: #a0a0a0;
+    margin-top: 0.25rem;
+  }
+  
+  /* Button */
+  
+  .cert-button-wrapper {
+    margin-top: 1.1rem;
+  }
+  
+  .cert-view-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.15s ease-out, transform 0.1s ease-out,
+      box-shadow 0.15s ease-out;
+  }
+  
+  .cert-view-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  }
+  
+  /* Dots */
+  
+  .cert-dots {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .cert-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: none;
+    background: #4b5563;
+    cursor: pointer;
+    transition: background 0.15s ease-out, transform 0.1s ease-out;
+  }
+  
+  .cert-dot:hover {
+    background: #6b7280;
+  }
+  
+  .cert-dot-active {
+    background: #2563eb;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 900px) {
+    .cert-slider {
+      gap: 1rem;
+    }
+  
+    .cert-arrow-btn {
+      width: 34px;
+      height: 34px;
+    }
+  }

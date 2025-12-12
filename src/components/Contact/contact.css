@@ -1,0 +1,217 @@
+/* Section layout – same width/padding vibe as .exp / .certifications-section */
+
+/* Make the whole contact band match #intro */
+.contact {
+    background: #1f1f1f;   /* same as #intro */
+    color: #fff;
+    padding: 6rem 1.5rem 5rem;
+  }
+  
+  /* Move the width constraints to the inner container */
+  .contact__inner {
+    max-width: 1100px;     /* or 520px if you prefer narrower */
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Title + subtitle */
+  
+  .contact__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+  }
+  
+  .contact__subtitle {
+    font-size: 1rem;
+    color: #c9c9c9;
+    margin: 0 0 2.5rem 0;
+  }
+  
+  /* Form */
+  
+  .contact__form {
+    background: #181818;
+    padding: 1.5rem 1.7rem;
+    border-radius: 1rem;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.55);
+  }
+  
+  .contact__input,
+  .contact__textarea {
+    width: 100%;
+    background: #181818;
+    border-radius: 0.4rem;
+    border: none;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    color: #f9fafb;
+    outline: none;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+  }
+  /* --- Improved spacing between inputs --- */
+
+.contact__form {
+  padding: 2.4rem 2rem;  /* increased from 1.5rem 1.7rem */
+}
+
+/* Increase vertical space between elements */
+.contact__input,
+.contact__textarea {
+  margin-bottom: 1.35rem;   /* was default, now more spaced */
+  padding: 1.1rem 1rem;      /* slightly taller input fields */
+}
+
+/* Taller textarea */
+.contact__textarea {
+  min-height: 180px;         /* more writing room */
+}
+
+/* More space before submit button */
+.contact__button {
+  margin-top: 2rem;          /* was 1.2rem */
+}
+
+/* More breathing room under the form */
+.contact__socials {
+  margin-top: 2rem;          /* more space under button */
+}
+
+  .contact__textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+  
+  .contact__input::placeholder,
+  .contact__textarea::placeholder {
+    color: #7a7a7a;
+  }
+  
+  .contact__input:focus,
+  .contact__textarea:focus {
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+    border: 1px solid #2563eb;
+  }
+  
+  /* Submit button */
+  
+  .contact__button {
+    margin: 1.2rem auto 0;
+    padding: 0.8rem 2.3rem;
+    border-radius: 0.6rem;
+    border: none;
+    background: #ffffff;
+    color: #111111;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5);
+    transition: background 0.15s ease-out, transform 0.15s ease-out,
+      box-shadow 0.15s ease-out;
+  }
+  
+  .contact__button:hover {
+    background: #f3f4f6;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.6);
+  }
+  
+/* wrapper under the button */
+.contact__socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.9rem;
+    margin-top: 1.4rem;
+  }
+  
+  /* base chip */
+  .contact__social {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background: #111827;                 /* dark, subtle */
+    color: #e5e7eb;
+    text-decoration: none;
+  
+    border: 1px solid #27272f;           /* thin border, no heavy glow */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+  
+    transition: transform 0.15s ease-out,
+                box-shadow 0.15s ease-out,
+                border-color 0.15s ease-out,
+                background 0.15s ease-out;
+  }
+  
+  /* LinkedIn accent */
+  .contact__social--linkedin {
+    background: #2563eb;
+    border-color: #2563eb;
+  }
+  
+  /* GitHub accent */
+  .contact__social--github {
+    background: #111827;
+    border-color: #374151;
+  }
+  
+  /* icon size */
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* hover – small lift, not crazy */
+  .contact__social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.6);
+    border-color: #4b5563;
+  }
+  .toast {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1f1f1f;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    border: 1px solid #333;
+    z-index: 1000;
+    animation: slideUp 0.4s ease, fadeOut 0.5s ease 2.6s forwards;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px);
+    }
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 600px) {
+    .contact__title {
+      font-size: 2.2rem;
+    }
+  
+    .contact__inner {
+      max-width: 100%;
+    }
+  }

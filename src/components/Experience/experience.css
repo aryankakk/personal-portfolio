@@ -1,0 +1,178 @@
+/* ========== Section layout ========== */
+
+.exp {
+  padding: 6rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.exp__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.exp__subtitle {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #c9c9c9;
+  text-align: center;
+}
+
+/* ========== Two-column layout ========== */
+
+.exp__layout {
+  display: grid;
+  /* fixed-ish sidebar, flexible detail panel */
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 2rem;
+}
+
+/* ========== Sidebar ========== */
+
+.exp__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Sidebar job card */
+.expSidebarItem {
+  background: #181818;
+  border-radius: 1.25rem;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+
+  width: 100%;             /* ✅ every card is same width */
+  box-sizing: border-box;  /* ✅ padding/border don’t change width */
+
+  border: 1px solid transparent; /* “invisible” by default */
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transition:
+    background 0.15s ease-out,
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out,
+    border-color 0.15s ease-out;
+}
+
+/* Active job card – same width, just different color */
+.expSidebarItem--active {
+  background: #1f2937;
+  border-color: #2563eb;   /* blue border highlight */
+}
+
+/* Hover lift */
+.expSidebarItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+}
+
+/* Logo / icon circle */
+.expSidebarItem__icon {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  min-height: 70px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;  /* crop logos into circle */
+  flex-shrink: 0;
+}
+
+/* Fallback initial letter */
+.expSidebarItem__icon span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Logo image */
+.expSidebarItem__icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Text stack */
+.expSidebarItem__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.expSidebarItem__role {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.expSidebarItem--active .expSidebarItem__role {
+  color: #ffffff;
+}
+
+.expSidebarItem__company {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+
+/* ========== Detail panel ========== */
+
+.exp__detail {
+  display: flex;
+  align-items: stretch;
+}
+
+.expDetailCard {
+  background: #181818;
+  border-radius: 1.5rem;
+  padding: 1.9rem 2.1rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+.expDetailCard__role {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.expDetailCard__company {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #d0d0d0;
+}
+
+.expDetailCard__meta {
+  margin: 0.4rem 0 1rem 0;
+  font-size: 0.85rem;
+  color: #a0a0a0;
+}
+
+.expDetailCard__points {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 1rem;
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+/* ========== Responsive ========== */
+
+@media (max-width: 900px) {
+  .exp__layout {
+    grid-template-columns: 1fr;
+  }
+}

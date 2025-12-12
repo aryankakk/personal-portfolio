@@ -1,0 +1,160 @@
+/* Section wrapper */
+#intro {
+    background: #1f1f1f;          /* dark hero bg (optional) */
+    color: #fff;
+    padding: 6rem 1.5rem;         /* top/bottom space */
+    position: relative;
+    overflow: visible;
+
+  }
+  /* new wrapper that anchors the absolute photo */
+.introInner {
+    max-width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 420px;            /* room so the photo fits */
+    z-index: 1; 
+  }
+  
+  
+  /* Center the content and control width */
+  .introContent {
+    max-width: 880px;
+    min-height: 420px;
+    /* was: margin: 0 auto; */
+    margin: 0;                                     /* left-align inside wrapper */
+    margin-right: clamp(10rem, 18vw, 20rem);       /* space for the photo */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;                             /* needed for ::before veil */
+    z-index: 3;                                     /* above the photo */
+
+  }
+  .heroPhoto {
+    position: absolute;
+    right: 2.5rem;
+    bottom: 0;
+    width: clamp(260px, 32vw, 420px);
+    height: auto;
+    pointer-events: none;
+    filter: drop-shadow(0 18px 40px rgba(0,0,0,.55));
+    background: transparent !important;
+    z-index: 1;                                     /* text (3) > veil (2) > photo (1) */
+  }
+  
+  
+  /* First small line: "Hello," */
+  .greeting {
+    display: block;
+    font-size: 30px;
+    color: #d1d5db;                /* muted gray */
+    letter-spacing: .5px;
+  }
+  
+  /* Big headline lines */
+  .introText {
+    line-height: 1.2;
+    font-size: clamp(2rem, 4vw, 3rem);   /* responsive 32–48px */
+    font-weight: 800;
+    letter-spacing: .3px;
+    color: white;
+  }
+  
+  /* Emphasized name */
+  .introName {
+    color: #ffd54a;                /* highlight color */
+    margin-left: .35rem;
+  }
+  
+  /* Subheadline paragraph */
+  .introPara {
+    margin-top: .25rem;
+    font-size: 1.5rem;          
+    line-height: 1.6;
+    color: white;              
+  }
+  
+  /* The pill button (works on the react-scroll <Link>) */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1rem;
+  
+    background: #fff;
+    color: #111;
+    border: 1px solid #e5e7eb;
+    border-radius: 9999px;
+  
+    padding: .8rem 1.2rem;
+    font-weight: 600;
+    text-decoration: none;         /* remove underline */
+    cursor: pointer;
+    box-shadow: 0 2px 0 rgba(0,0,0,.15);
+    transition: background .2s, transform .15s, box-shadow .15s;
+  }
+  
+  /* Icon inside button (react-icons/svg) */
+  .btn svg { 
+    flex: none; 
+    width: 18px; 
+    height: 18px; 
+  }
+  
+  .btn:hover {
+    background: #f7f7f7;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0,0,0,.2);
+  }
+  
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  }
+  
+
+  .bg { 
+    width: min(520px, 90%);
+    height: auto;
+    object-fit: contain;
+    /* If your image has transparent background, this makes it “pop” like the screenshot */
+    filter: drop-shadow(0 18px 40px rgba(0,0,0,.55));
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+@media screen and (max-width: 768px) {
+  #intro {
+    padding: 4rem 1.5rem 6rem 1.5rem;
+    position: relative;
+    overflow: hidden; /* so the image doesn't spill out */
+  }
+
+  .introInner {
+    min-height: auto;
+    position: relative;
+  }
+
+  .introContent {
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 2; /* text above the image */
+  }
+
+  .heroPhoto {
+    position: absolute;          /* take it out of normal flow */
+    right: -10%;                 /* adjust as you like */
+    top: 10%;                    /* adjust as you like */
+    width: 80vw;                 /* big, responsive */
+    max-width: 400px;
+    z-index: 1;                  /* behind text, above background */
+    opacity: 0.4;                /* optional: lighten it */
+    filter: drop-shadow(0 12px 30px rgba(0,0,0,.4));
+  }
+}
+

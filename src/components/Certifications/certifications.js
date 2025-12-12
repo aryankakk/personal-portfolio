@@ -7,19 +7,19 @@ const certificationsData = [
     title: "Java Object-Oriented Programming",
     provider: "LinkedIn Learning",
     date: "2024",
-    link: "/certs/OOP.pdf", // replace with your file/link
+    link: "/Certs/OOP.pdf",
   },
   {
     title: "Learning Java 11",
     provider: "LinkedIn Learning",
     date: "2024",
-    link: "/certs/Java 11.pdf",
+    link: "/Certs/Java 11.pdf",
   },
   {
     title: "LEARN HTML and CSS",
     provider: "Scrimba",
     date: "2024",
-    link: "/certs/HTML and CSS.pdf",
+    link: "/Certs/HTML and CSS.pdf",
   },
 ];
 

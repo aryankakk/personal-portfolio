@@ -19,7 +19,7 @@ const certificationsData = [
     title: "LEARN HTML and CSS",
     provider: "Scrimba",
     date: "2024",
-    link: "/Certs/HTML and CSS.pdf",
+    link: "/Certs/HTML AND CSS.pdf",
   },
 ];
 

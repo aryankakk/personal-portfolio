@@ -63,14 +63,14 @@ const Skills = () => {
   const prevPhoto = () =>
     setPhotoIndex((i) => (i - 1 + LIFE_SLIDES.length) % LIFE_SLIDES.length);
 
-  // auto-advance every 7s
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setPhotoIndex((i) => (i + 1) % LIFE_SLIDES.length);
-    }, 7000);
+// auto-advance every 7s, and reset timer whenever photo changes
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setPhotoIndex((i) => (i + 1) % LIFE_SLIDES.length);
+  }, 7000);
 
-    return () => clearInterval(timer);
-  }, []);
+  return () => clearTimeout(timer);
+}, [photoIndex]);
 
   // keyboard navigation
   useEffect(() => {
@@ -167,10 +167,6 @@ const Skills = () => {
             ›
           </button>
         </div>
-
-        <p className="lifeSlider__caption">
-          {LIFE_SLIDES[photoIndex].caption}
-        </p>
       </div>
     </section>
   );
